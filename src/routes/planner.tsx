@@ -8,7 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { daysUntil, sortTasks, streamGenerate, useLocal, type Priority, type Task } from "@/lib/store";
-import { PriorityDot } from "./index";
+import { PriorityDot } from "@/components/PriorityDot";
 
 export const Route = createFileRoute("/planner")({
   head: () => ({

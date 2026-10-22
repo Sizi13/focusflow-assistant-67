@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, BookOpenText, ListChecks, MessagesSquare } from "lucide-react";
 import { PageHeader } from "@/components/AppShell";
+import { PriorityDot } from "@/components/PriorityDot";
 import { Progress } from "@/components/ui/progress";
 import { daysUntil, sortTasks, useLocal, type ResearchNote, type Task } from "@/lib/store";
 
@@ -88,11 +89,6 @@ function Dashboard() {
       </div>
     </>
   );
-}
-
-export function PriorityDot({ p }: { p: Task["priority"] }) {
-  const c = p === "high" ? "bg-primary" : p === "medium" ? "bg-chart-3" : "bg-accent";
-  return <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${c}`} aria-label={`${p} priority`} />;
 }
 
 function Stat({ label, value, tone }: { label: string; value: number; tone?: string }) {
