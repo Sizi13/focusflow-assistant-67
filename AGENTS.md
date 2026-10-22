@@ -8,3 +8,6 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- User data (tasks, research, chat) lives in browser localStorage via `src/lib/store.ts`; no accounts, so no backend database is needed.
+- AI calls go through server routes `/api/chat` (UI message stream) and `/api/generate` (text stream) using `src/server/ai.ts`; keeps the API key server-side.
