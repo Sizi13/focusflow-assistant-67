@@ -91,7 +91,7 @@ function Dashboard() {
   );
 }
 
-function Stat({ label, value, tone }: { label: string; value: number; tone?: string }) {
+function Stat({ label, value, tone }: { label: string; value: number; tone?: string | undefined }) {
   return (
     <div className="paper p-5">
       <p className="text-sm text-muted-foreground">{label}</p>

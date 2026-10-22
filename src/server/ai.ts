@@ -14,7 +14,7 @@ export function streamAi(
   instructions: string,
   mode: "ui" | "text",
 ) {
-  const apiKey = process.env.LOVABLE_API_KEY;
+  const apiKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey) {
     return new Response(JSON.stringify({ error: "AI is not configured." }), { status: 500 });
   }
